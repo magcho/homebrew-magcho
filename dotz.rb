@@ -1,8 +1,9 @@
 class Dotz < Formula
   desc "backup and restore dotfiles"
   homepage "https://github.com/magcho/dotz/"
-  url "https://github.com/magcho/dotz/releases/download/v0.1.0/dotz"
-  sha256 "feb059fbed52e606c3f1fabaa32fdbef713db7ccfc7902ae5502dd3dc3d92e7a"
+  version "0.1.1"
+  url "https://github.com/magcho/dotz/releases/download/v#{version}/dotz"
+  sha256 "09339c041f1dccb5dbc756d81d777159cc2720e4644b10e678704d717e7715fc"
 
   def install
     bin.install "dotz"
