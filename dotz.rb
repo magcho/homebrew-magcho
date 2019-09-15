@@ -3,7 +3,7 @@ class Dotz < Formula
   homepage "https://github.com/magcho/dotz/"
   version "0.1.1"
   url "https://github.com/magcho/dotz/releases/download/v#{version}/dotz"
-  sha256 "09339c041f1dccb5dbc756d81d777159cc2720e4644b10e678704d717e7715fc"
+  sha256 "c9f628993cb20abb0c1f8553602d7f87ed86f9b8b123b97bfd1a4b84585e7c56"
 
   def install
     bin.install "dotz"
