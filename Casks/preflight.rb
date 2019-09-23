@@ -8,5 +8,5 @@ cask 'preflight' do
 
   pkg "PrefLight#{version.delete('.')}.pkg"
 
-  zap trash: '/Applications/PrefLight.app'
+  uninstall pkgutil: "jp.co.kuwatec.PrefLight"
 end
