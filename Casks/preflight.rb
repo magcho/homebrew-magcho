@@ -1,6 +1,6 @@
 cask 'preflight' do
-  version '2.2.1'
-  sha256 '389eecfa60e0c9e0d19214369b976b63567cc5373e24f8f10862af473d3b2265'
+  version '2.2.4'
+  sha256 '052600202d5f7ed5d69186683ad1aca700a2f00ab1676e00a19da99167cc8e78'
 
   url "http://www.kuwatec.co.jp/preflight/download/PrefLight#{version.delete('.')}.pkg"
   name 'PrefLight'
