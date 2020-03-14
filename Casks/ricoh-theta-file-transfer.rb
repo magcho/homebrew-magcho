@@ -6,5 +6,7 @@ cask 'ricoh-theta-file-transfer' do
   name 'RICOH THETA File Transfer'
   homepage 'https://theta360.com/ja/'
 
+  app 'RICOH THETA File Transfer for Mac.app'
+
   uninstall pkgutil: 'com.ricoh.RICOH-THETA-File-Transfer-for-Mac'
 end
