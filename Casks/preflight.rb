@@ -1,6 +1,6 @@
 cask 'preflight' do
-  version '2.2.4'
-  sha256 '052600202d5f7ed5d69186683ad1aca700a2f00ab1676e00a19da99167cc8e78'
+  version '2.3.2'
+  sha256 'ea80563c4ce6fa0e655afafedfa0dcabf954c403823311502c1c5565e844c0d0'
 
   url "http://www.kuwatec.co.jp/preflight/download/PrefLight#{version.delete('.')}.pkg"
   name 'PrefLight'
@@ -8,5 +8,5 @@ cask 'preflight' do
 
   pkg "PrefLight#{version.delete('.')}.pkg"
 
-  uninstall pkgutil: "jp.co.kuwatec.PrefLight"
+  uninstall pkgutil: 'jp.co.kuwatec.PrefLight'
 end
