@@ -1,0 +1,39 @@
+name: Update tov formula
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-tov-formula
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Test updater
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Update formula from latest public release
+        run: python3 scripts/update_tov.py
+
+      - name: Commit formula update
+        run: |
+          git add tov.rb
+          if git diff --cached --quiet; then
+            echo "Formula is already current"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          VERSION=$(python3 -c 'import re; print(re.search(r"version \"([^\"]+)\"", open("tov.rb").read()).group(1))')
+          git commit -m "tov ${VERSION}"
+          git push
