@@ -5,21 +5,21 @@
 class Tov < Formula
   desc "tmux overseer — TUI tool for monitoring all tmux panes with Claude Code status"
   homepage "https://github.com/magcho/tmux-overview"
-  version "1.2.1"
+  version "1.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/magcho/tmux-overview/releases/download/v1.2.1/tov_1.2.1_darwin_amd64.tar.gz"
-      sha256 "9dbc61e97640392bad9eb73b204f258054b72acee9302d63cf5e15c65534f780"
+      url "https://github.com/magcho/tmux-overview/releases/download/v1.3.0/tov_1.3.0_darwin_amd64.tar.gz"
+      sha256 "21e023b878608c7730fb1a6f84f52a4c80b2e14c85635b624b432a2d7b0a2fa1"
 
       define_method(:install) do
         bin.install "tov"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/magcho/tmux-overview/releases/download/v1.2.1/tov_1.2.1_darwin_arm64.tar.gz"
-      sha256 "9f9ab7886a97c29511f020f9732321dea00178dd714953d43fce99720de60626"
+      url "https://github.com/magcho/tmux-overview/releases/download/v1.3.0/tov_1.3.0_darwin_arm64.tar.gz"
+      sha256 "a60258c420a738e2ee4d9823b9b221dd00bfd51d3b2eb86618a9cfaab8627de0"
 
       define_method(:install) do
         bin.install "tov"
@@ -29,15 +29,15 @@ class Tov < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/magcho/tmux-overview/releases/download/v1.2.1/tov_1.2.1_linux_amd64.tar.gz"
-      sha256 "d64ef8ebb15d3d4bd5b5cb4deb875a88d73a5a298ab89a1ce268ee0ba83810f6"
+      url "https://github.com/magcho/tmux-overview/releases/download/v1.3.0/tov_1.3.0_linux_amd64.tar.gz"
+      sha256 "0dac1b811d3feec7484f2822a9bb54aa52439a8782539da573f444c86f8a5b3c"
       define_method(:install) do
         bin.install "tov"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/magcho/tmux-overview/releases/download/v1.2.1/tov_1.2.1_linux_arm64.tar.gz"
-      sha256 "41fc82a0d690f4cf0abf3e4a5618bae1ad8bdca06df475b4bc8f101cd4352fec"
+      url "https://github.com/magcho/tmux-overview/releases/download/v1.3.0/tov_1.3.0_linux_arm64.tar.gz"
+      sha256 "0efd173d17926b981bafde2a174883042ef7a4c0a6676a2b7fb93180f381ed2d"
       define_method(:install) do
         bin.install "tov"
       end
